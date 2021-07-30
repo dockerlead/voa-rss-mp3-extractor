@@ -1,0 +1,15 @@
+{
+  "name": "voa-rss-mp3-extractor",
+  "version": "1.0.0",
+  "description": "Get the latest RSS feed as MP3 URLs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "DockerLead<dockerlead@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "download": "^8.0.0"
+  }
+}
