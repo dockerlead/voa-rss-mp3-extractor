@@ -2,7 +2,7 @@ const axios = require('axios');
 const download = require('download');
 
 
-const RSS_FEED_URL = 'https://www.voanews.com/podcast/76/listen';
+const RSS_FEED_URL = 'https://www.voanews.com/podcast/?zoneId=5082';
 const mp3Regex = /(url)\=\"https:\/\/(www.)?(.*?)\.(mp3)\"/g;
 
 const getMP3List = async () => {
@@ -17,6 +17,7 @@ const getMP3List = async () => {
 
 const downloadFiles = async () => {
   const urls = await getMP3List();
+  console.log(urls)
   Promise.all(
     urls.map(url => download(url, 'downloads'))
   );
